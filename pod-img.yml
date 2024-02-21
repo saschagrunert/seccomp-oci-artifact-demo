@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod
+  # no Pod annotations set
+spec:
+  containers:
+  - name: container
+    image: quay.io/crio/nginx-seccomp:generic
