@@ -2,7 +2,7 @@ module github.com/saschagrunert/seccomp-oci-artifact-demo
 
 go 1.22.0
 
-require github.com/saschagrunert/demo v0.0.0-20240129082513-facba5090fd7
+require github.com/saschagrunert/demo v0.0.0-20240222092742-5f31cbdd7f1f
 
 require (
 	github.com/cpuguy83/go-md2man/v2 v2.0.2 // indirect

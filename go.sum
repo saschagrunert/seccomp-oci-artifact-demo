@@ -20,8 +20,8 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/russross/blackfriday/v2 v2.1.0 h1:JIOH55/0cWyOuilr9/qlrm0BSXldqnqwMsf35Ld67mk=
 github.com/russross/blackfriday/v2 v2.1.0/go.mod h1:+Rmxgy9KzJVeS9/2gXHxylqXiyQDYRxCVz55jmeOWTM=
-github.com/saschagrunert/demo v0.0.0-20240129082513-facba5090fd7 h1:eDxhZdLUOd+wfO3r3hxuz4+IboCbNE+SWgPE8HYOZAc=
-github.com/saschagrunert/demo v0.0.0-20240129082513-facba5090fd7/go.mod h1:okgqKpjBwQXuwwZUuuHeAC9gsO2/zcg1MCMIp6uSc/c=
+github.com/saschagrunert/demo v0.0.0-20240222092742-5f31cbdd7f1f h1:MLLc1DbXFaJmEBw0mXwPQkGf7cw5SBfag2t+fZaHtfQ=
+github.com/saschagrunert/demo v0.0.0-20240222092742-5f31cbdd7f1f/go.mod h1:p+101H5hmhM9kXlKZnBazuknIA8O/QuFDEm0Vpa6NwQ=
 github.com/stretchr/testify v1.8.4 h1:CcVxjf3Q8PM0mHUKJCdn+eZZtm5yQwehR5yeSVQQcUk=
 github.com/stretchr/testify v1.8.4/go.mod h1:sz/lmYIOXD/1dqDmKjjqLyZ2RngseejIcXlSw2iwfAo=
 github.com/urfave/cli/v2 v2.27.1 h1:8xSQ6szndafKVRmfyeUMxkNUJQMjL1F2zmsZ+qHpfho=
