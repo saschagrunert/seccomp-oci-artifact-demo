@@ -27,8 +27,27 @@ func demo() *Run {
 	))
 
 	r.Step(S(
-		"To apply a seccomp profile to a whole pod",
-		"use the annotation including the suffix `/POD",
+		"We disable the `seccomp_use_default_when_empty` feature",
+		"to run containers as `Unconfined` per default. This means",
+		"that a workload like this",
+	), S(
+		"cat pod-unconfined.yml",
+	))
+
+	r.Step(nil, S("kubectl apply -f pod-unconfined.yml"))
+
+	r.Step(S(
+		"Will run without any apply seccomp profile",
+	), S(
+		"export CONTAINER_ID=$(sudo crictl ps --name container -q) &&",
+		"sudo crictl inspect $CONTAINER_ID | jq .info.runtimeSpec.linux.seccomp",
+	))
+
+	r.Step(nil, S("kubectl delete -f pod-unconfined.yml"))
+
+	r.Step(S(
+		"We can now use the annotation `seccomp-profile.kubernetes.cri-o.io/POD`",
+		"to apply a seccomp profile to a whole pod.",
 	), S(
 		"cat pod.yml",
 	))
