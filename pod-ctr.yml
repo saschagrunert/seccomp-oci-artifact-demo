@@ -8,3 +8,5 @@ spec:
   containers:
   - name: container
     image: nginx:1.25.3
+  - name: container-unconfined
+    image: quay.io/crio/fedora-crio-ci:latest

@@ -74,11 +74,18 @@ func demo() *Run {
 	r.Step(nil, S("kubectl apply -f pod-ctr.yml"))
 
 	r.Step(S(
-		"Again, the container should now run using the profile, rather",
+		"Again, the main container should now run using the profile, rather",
 		"than running `Unconfined`",
 	), S(
 		"export CONTAINER_ID=$(sudo crictl ps --name container -q) &&",
 		"sudo crictl inspect $CONTAINER_ID | jq .info.runtimeSpec.linux.seccomp | head",
+	))
+
+	r.Step(S(
+		"But the second container should still run as `Unconfined`",
+	), S(
+		"export CONTAINER_ID=$(sudo crictl ps --name container-unconfined -q) &&",
+		"sudo crictl inspect $CONTAINER_ID | jq .info.runtimeSpec.linux.seccomp",
 	))
 
 	r.Step(nil, S("kubectl delete -f pod-ctr.yml"))
@@ -126,6 +133,9 @@ func demo() *Run {
 		"as well as stacking profiles together (future work).",
 		"",
 		"Pushing profiles can be done using ORAS: https://oras.land",
+		"",
+		"A blog post will be published soon containing all the details:",
+		"https://github.com/kubernetes/website/pull/45121",
 	), nil)
 
 	return r
